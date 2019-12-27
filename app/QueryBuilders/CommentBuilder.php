@@ -25,7 +25,7 @@ class CommentBuilder extends QueryBuilder
 
     public function sorts(): array
     {
-
+        return [];
     }
 
     public function model()

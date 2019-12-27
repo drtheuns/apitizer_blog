@@ -5,6 +5,7 @@ namespace App\QueryBuilders;
 use App\Models\Post;
 use Apitizer\QueryBuilder;
 use Apitizer\Transformers\DateTimeFormat;
+use Apitizer\Types\Apidoc;
 
 class PostBuilder extends QueryBuilder
 {
@@ -22,12 +23,16 @@ class PostBuilder extends QueryBuilder
 
     public function filters(): array
     {
-        return [];
+        return [
+            'title' => $this->filter()->search('title'),
+        ];
     }
 
     public function sorts(): array
     {
-        return [];
+        return [
+            'created_at' => $this->sort()->byField('created_at'),
+        ];
     }
 
     public function model()
