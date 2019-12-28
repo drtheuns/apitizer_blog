@@ -12,12 +12,13 @@ class PostBuilder extends QueryBuilder
     public function fields(): array
     {
         return [
-            'id' => $this->int('id'),
-            'title' => $this->string('title')->description('wow'),
-            'body' => $this->string('body'),
+            'id'         => $this->int('id'),
+            'title'      => $this->string('title')->description('wow'),
+            'body'       => $this->string('body'),
             'created_at' => $this->datetime('created_at')->format(),
             'updated_at' => $this->datetime('updated_at')->format(),
-            'comments' => $this->association('comments', CommentBuilder::class),
+            'comments'   => $this->association('comments', CommentBuilder::class),
+            'tags'       => $this->association('tags', TagBuilder::class),
         ];
     }
 
