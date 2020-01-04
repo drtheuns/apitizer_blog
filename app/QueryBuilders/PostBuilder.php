@@ -4,8 +4,6 @@ namespace App\QueryBuilders;
 
 use App\Models\Post;
 use Apitizer\QueryBuilder;
-use Apitizer\Transformers\DateTimeFormat;
-use Apitizer\Types\Apidoc;
 
 class PostBuilder extends QueryBuilder
 {
@@ -15,9 +13,11 @@ class PostBuilder extends QueryBuilder
             'id'         => $this->int('id'),
             'title'      => $this->string('title')->description('wow'),
             'body'       => $this->string('body'),
+            'status'     => $this->enum('status', ['published', 'draft', 'scrapped', 'another-status']),
             'created_at' => $this->datetime('created_at')->format(),
             'updated_at' => $this->datetime('updated_at')->format(),
-            'comments'   => $this->association('comments', CommentBuilder::class),
+            'comments'   => $this->association('comments', CommentBuilder::class)
+                                 ->description('People always have an opinion.'),
             'tags'       => $this->association('tags', TagBuilder::class),
         ];
     }
