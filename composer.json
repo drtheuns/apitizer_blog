@@ -18,6 +18,7 @@
         "drtheuns/apitizer_php": "dev-master",
         "fideloper/proxy": "^4.0",
         "laravel/framework": "^6.2",
+        "laravel/telescope": "^2.1",
         "laravel/tinker": "^2.0"
     },
     "require-dev": {
