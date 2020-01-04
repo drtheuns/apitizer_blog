@@ -26,6 +26,8 @@ class PostBuilder extends QueryBuilder
     {
         return [
             'title' => $this->filter()->search('title'),
+            'status' => $this->filter()->byField('status'),
+            'statuses' => $this->filter()->byField('status')->expectMany('string'),
         ];
     }
 

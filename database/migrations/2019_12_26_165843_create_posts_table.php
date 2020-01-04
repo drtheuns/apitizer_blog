@@ -17,7 +17,9 @@ class CreatePostsTable extends Migration
             $table->bigIncrements('id');
             $table->unsignedBigInteger('author_id');
             $table->string('title');
-            $table->string('body');
+            $table->text('body');
+            // Purely as an enum-example in the builder.
+            $table->enum('status', ['published', 'draft', 'scrapped', 'another-status']);
             $table->timestamps();
 
             $table->foreign('author_id')->references('id')->on('users');
