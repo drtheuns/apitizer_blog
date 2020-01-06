@@ -2,7 +2,7 @@
 
 namespace App\Data;
 
-class PostData extends \Apitizer\Support\Data
+class PostData extends Data
 {
     /**
      * @var string
