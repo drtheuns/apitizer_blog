@@ -3,7 +3,7 @@
 namespace App\QueryBuilders;
 
 use App\Models\User;
-use Apitizer\QueryBuilder;
+use Illuminate\Database\Eloquent\Model;
 
 class UserBuilder extends QueryBuilder
 {
@@ -26,7 +26,7 @@ class UserBuilder extends QueryBuilder
         return [];
     }
 
-    public function model()
+    public function model(): Model
     {
         return new User;
     }

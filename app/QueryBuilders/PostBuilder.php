@@ -3,7 +3,7 @@
 namespace App\QueryBuilders;
 
 use App\Models\Post;
-use Apitizer\QueryBuilder;
+use Illuminate\Database\Eloquent\Model;
 
 class PostBuilder extends QueryBuilder
 {
@@ -44,7 +44,7 @@ class PostBuilder extends QueryBuilder
         ];
     }
 
-    public function model()
+    public function model(): Model
     {
         return new Post();
     }

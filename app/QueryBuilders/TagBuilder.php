@@ -3,7 +3,7 @@
 namespace App\QueryBuilders;
 
 use App\Models\Tag;
-use Apitizer\QueryBuilder;
+use Illuminate\Database\Eloquent\Model;
 
 class TagBuilder extends QueryBuilder
 {
@@ -27,7 +27,7 @@ class TagBuilder extends QueryBuilder
         ];
     }
 
-    public function model()
+    public function model(): Model
     {
         return new Tag;
     }

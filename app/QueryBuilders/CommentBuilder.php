@@ -3,7 +3,7 @@
 namespace App\QueryBuilders;
 
 use App\Models\Comment;
-use Apitizer\QueryBuilder;
+use Illuminate\Database\Eloquent\Model;
 
 class CommentBuilder extends QueryBuilder
 {
@@ -28,7 +28,7 @@ class CommentBuilder extends QueryBuilder
         return [];
     }
 
-    public function model()
+    public function model(): Model
     {
         return new Comment();
     }
