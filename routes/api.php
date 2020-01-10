@@ -19,4 +19,5 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
 });
 
 Route::get('/posts', 'PostController@index');
+Route::get('/posts/{post}', 'PostController@show');
 Route::get('/comments', 'CommentController@index');
