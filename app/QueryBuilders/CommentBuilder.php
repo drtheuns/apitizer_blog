@@ -11,6 +11,7 @@ class CommentBuilder extends QueryBuilder
     {
         return [
             'id'         => $this->int('id'),
+            'uuid'       => $this->uuid('uuid'),
             'body'       => $this->string('body'),
             'created_at' => $this->datetime('created_at')->format(),
             'updated_at' => $this->datetime('updated_at')->format(),

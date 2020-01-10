@@ -2,10 +2,13 @@
 
 namespace App\Models;
 
+use App\Traits\HasUuid;
 use Illuminate\Database\Eloquent\Model;
 
 class Comment extends Model
 {
+    use HasUuid;
+
     public function post()
     {
         return $this->belongsTo(Post::class);

@@ -11,6 +11,7 @@ class PostBuilder extends QueryBuilder
     {
         return [
             'id'         => $this->int('id'),
+            'uuid'       => $this->uuid('uuid'),
             'title'      => $this->string('title')->description('wow'),
             'body'       => $this->string('body'),
             'status'     => $this->enum('status', ['published', 'draft', 'scrapped', 'another-status']),
