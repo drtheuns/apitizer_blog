@@ -3,6 +3,7 @@
 namespace App\QueryBuilders;
 
 use App\Models\Post;
+use App\QueryBuilders\Policies\Authenticated;
 use Illuminate\Database\Eloquent\Model;
 
 class PostBuilder extends QueryBuilder
@@ -13,7 +14,8 @@ class PostBuilder extends QueryBuilder
             'id'         => $this->int('id'),
             'uuid'       => $this->uuid('uuid'),
             'title'      => $this->string('title')->description('wow'),
-            'body'       => $this->string('body'),
+            'body'       => $this->string('body')
+                                 ->policy(new Authenticated),
             'status'     => $this->enum('status', ['published', 'draft', 'scrapped', 'another-status']),
             'created_at' => $this->datetime('created_at')->format(),
             'updated_at' => $this->datetime('updated_at')->format(),
@@ -41,6 +43,7 @@ class PostBuilder extends QueryBuilder
     public function sorts(): array
     {
         return [
+            'id'         => $this->sort()->byField('id'),
             'created_at' => $this->sort()->byField('created_at'),
         ];
     }
