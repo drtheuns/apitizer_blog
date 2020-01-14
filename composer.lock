@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "a233b4c3171b82034b5966efdff42e3d",
+    "content-hash": "064b07b11e4492f3fb16db38c6474996",
     "packages": [
         {
             "name": "dnoegel/php-xdg-base-dir",
@@ -224,21 +224,22 @@
         },
         {
             "name": "drtheuns/apitizer_php",
-            "version": "0.1.0",
+            "version": "0.2.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/drtheuns/apitizer_php.git",
-                "reference": "9b00de5e70be63116da87ee53a0ba81a9ec15c16"
+                "reference": "883743c0ccb9e892e47be6ce5b6d9157d751d65f"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/drtheuns/apitizer_php/zipball/9b00de5e70be63116da87ee53a0ba81a9ec15c16",
-                "reference": "9b00de5e70be63116da87ee53a0ba81a9ec15c16",
+                "url": "https://api.github.com/repos/drtheuns/apitizer_php/zipball/883743c0ccb9e892e47be6ce5b6d9157d751d65f",
+                "reference": "883743c0ccb9e892e47be6ce5b6d9157d751d65f",
                 "shasum": ""
             },
             "require": {
                 "illuminate/database": "^6.0",
-                "illuminate/http": "^6.0"
+                "illuminate/http": "^6.0",
+                "php": ">=7.2.0"
             },
             "require-dev": {
                 "orchestra/testbench": "^4.0",
@@ -267,8 +268,8 @@
                     "email": "randall@theuns.org"
                 }
             ],
-            "description": "A querybuilder library for JSON APIs",
-            "time": "2020-01-13T19:35:29+00:00"
+            "description": "A Laravel querybuilder library for JSON APIs",
+            "time": "2020-01-14T19:59:11+00:00"
         },
         {
             "name": "egulias/email-validator",
