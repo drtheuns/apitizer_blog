@@ -13,6 +13,7 @@ class UserBuilder extends QueryBuilder
             'id'    => $this->int('id'),
             'name'  => $this->string('name'),
             'email' => $this->string('email'),
+            'posts' => $this->association('posts', PostBuilder::class),
         ];
     }
 
