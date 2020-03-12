@@ -1,16 +1,16 @@
 <?php
 
-namespace App\QueryBuilders;
+namespace App\Schemas;
 
 use Apitizer\Validation\ObjectRules;
 use App\Models\Post;
 use App\Models\PostStatus;
-use App\QueryBuilders\Policies\Authenticated;
+use App\Schemas\Policies\Authenticated;
 use Apitizer\Validation\Rules;
 use Apitizer\Routing\Scope;
 use Illuminate\Database\Eloquent\Model;
 
-class PostBuilder extends QueryBuilder
+class PostSchema extends Schema
 {
     public function fields(): array
     {
@@ -29,10 +29,10 @@ class PostBuilder extends QueryBuilder
     public function associations(): array
     {
         return [
-            'author'     => $this->association('author', UserBuilder::class),
-            'comments'   => $this->association('comments', CommentBuilder::class)
+            'author'     => $this->association('author', UserSchema::class),
+            'comments'   => $this->association('comments', CommentSchema::class)
                                  ->description('People always have an opinion.'),
-            'tags'       => $this->association('tags', TagBuilder::class),
+            'tags'       => $this->association('tags', TagSchema::class),
         ];
     }
 
@@ -68,7 +68,7 @@ class PostBuilder extends QueryBuilder
             $object->object('details', function (ObjectRules $object) {
                 $object->uuid('author');
             });
-            // TODO: Based on relation, add one or many of storerules from child builder.
+            // TODO: Based on relation, add one or many of storerules from child schema.
             // $object->association('comments');
         });
     }

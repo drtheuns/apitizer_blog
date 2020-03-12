@@ -2,4 +2,4 @@
 
 An example API project with a familiar blog database structure to test Apitizer.
 
-Primarily centered around the `\App\QueryBuilders\*` classes.
+Primarily centered around the `\App\Schemas\*` classes.

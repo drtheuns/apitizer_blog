@@ -1,8 +1,8 @@
 <?php
 
-use App\QueryBuilders\CommentBuilder;
-use App\QueryBuilders\PostBuilder;
-use App\QueryBuilders\UserBuilder;
+use App\Schemas\CommentSchema;
+use App\Schemas\PostSchema;
+use App\Schemas\UserSchema;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 
@@ -17,6 +17,6 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::schema(PostBuilder::class);
-Route::schema(CommentBuilder::class);
-Route::schema(UserBuilder::class);
+Route::schema(PostSchema::class);
+Route::schema(CommentSchema::class);
+Route::schema(UserSchema::class);

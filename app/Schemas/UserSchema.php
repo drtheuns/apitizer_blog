@@ -1,6 +1,6 @@
 <?php
 
-namespace App\QueryBuilders;
+namespace App\Schemas;
 
 use Apitizer\Routing\Scope;
 use Apitizer\Validation\ObjectRules;
@@ -8,7 +8,7 @@ use App\Models\User;
 use Apitizer\Validation\Rules;
 use Illuminate\Database\Eloquent\Model;
 
-class UserBuilder extends QueryBuilder
+class UserSchema extends Schema
 {
     public function fields(): array
     {
@@ -22,8 +22,8 @@ class UserBuilder extends QueryBuilder
     public function associations(): array
     {
         return [
-            'posts' => $this->association('posts', PostBuilder::class),
-            'comments' => $this->association('comments', CommentBuilder::class),
+            'posts' => $this->association('posts', PostSchema::class),
+            'comments' => $this->association('comments', CommentSchema::class),
         ];
     }
 

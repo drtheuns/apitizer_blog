@@ -1,6 +1,6 @@
 <?php
 
-namespace App\QueryBuilders;
+namespace App\Schemas;
 
 use Apitizer\Routing\Scope;
 use App\Models\Tag;
@@ -8,7 +8,7 @@ use Apitizer\Validation\ObjectRules;
 use Apitizer\Validation\Rules;
 use Illuminate\Database\Eloquent\Model;
 
-class TagBuilder extends QueryBuilder
+class TagSchema extends Schema
 {
     public function fields(): array
     {

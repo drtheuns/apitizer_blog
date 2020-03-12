@@ -1,14 +1,13 @@
 <?php
 
-namespace App\QueryBuilders;
+namespace App\Schemas;
 
 use Apitizer\Routing\Scope;
 use App\Models\Comment;
-use Apitizer\Validation\RuleBuilder;
 use Apitizer\Validation\Rules;
 use Illuminate\Database\Eloquent\Model;
 
-class CommentBuilder extends QueryBuilder
+class CommentSchema extends Schema
 {
     public function fields(): array
     {
@@ -24,8 +23,8 @@ class CommentBuilder extends QueryBuilder
     public function associations(): array
     {
         return [
-            'post'   => $this->association('post', PostBuilder::class),
-            'author' => $this->association('author', UserBuilder::class),
+            'post'   => $this->association('post', PostSchema::class),
+            'author' => $this->association('author', UserSchema::class),
         ];
     }
 
