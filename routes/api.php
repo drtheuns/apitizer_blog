@@ -1,5 +1,8 @@
 <?php
 
+use App\QueryBuilders\CommentBuilder;
+use App\QueryBuilders\PostBuilder;
+use App\QueryBuilders\UserBuilder;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 
@@ -14,11 +17,6 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::middleware('auth:api')->get('/user', function (Request $request) {
-    return $request->user();
-});
-
-Route::get('/posts', 'PostController@index');
-Route::get('/posts/{post}', 'PostController@show');
-Route::get('/comments', 'CommentController@index');
-Route::get('/comments/{comment}', 'CommentController@show');
+Route::schema(PostBuilder::class);
+Route::schema(CommentBuilder::class);
+Route::schema(UserBuilder::class);

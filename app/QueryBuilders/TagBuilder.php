@@ -2,7 +2,10 @@
 
 namespace App\QueryBuilders;
 
+use Apitizer\Routing\Scope;
 use App\Models\Tag;
+use Apitizer\Validation\ObjectRules;
+use Apitizer\Validation\Rules;
 use Illuminate\Database\Eloquent\Model;
 
 class TagBuilder extends QueryBuilder
@@ -15,6 +18,11 @@ class TagBuilder extends QueryBuilder
         ];
     }
 
+    public function associations(): array
+    {
+        return [];
+    }
+
     public function filters(): array
     {
         return [];
@@ -25,6 +33,21 @@ class TagBuilder extends QueryBuilder
         return [
             'name' => $this->sort()->byField('name'),
         ];
+    }
+
+    public function rules(Rules $rules)
+    {
+        $rules->storeRules(function (ObjectRules $object) {
+            $object->string('name')->required();
+        });
+
+        $rules->updateRules(function (ObjectRules $object) {
+            $object->string('name')->required();
+        });
+    }
+
+    public function scope(Scope $scope)
+    {
     }
 
     public function model(): Model

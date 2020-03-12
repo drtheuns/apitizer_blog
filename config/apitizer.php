@@ -22,16 +22,4 @@ return [
      * The route prefix that should be used for the documentation routes.
      */
     'route_prefix' => 'apidoc',
-
-    /*
-     * The registered query builders.
-     *
-     * This should be set by the applications that use this library.
-     */
-    'query_builders' => [
-        \App\QueryBuilders\UserBuilder::class,
-        \App\QueryBuilders\PostBuilder::class,
-        \App\QueryBuilders\CommentBuilder::class,
-        \App\QueryBuilders\TagBuilder::class,
-    ],
 ];

@@ -4,6 +4,9 @@ namespace App\Providers;
 
 use Apitizer\ExceptionStrategy\Ignore;
 use Apitizer\ExceptionStrategy\Strategy;
+use Apitizer\Rendering\JsonApiRenderer;
+use Apitizer\Rendering\ReferenceMapRenderer;
+use Apitizer\Rendering\Renderer;
 use Illuminate\Support\ServiceProvider;
 
 class AppServiceProvider extends ServiceProvider
@@ -15,7 +18,7 @@ class AppServiceProvider extends ServiceProvider
      */
     public function register()
     {
-        //
+        // $this->app->bind(Renderer::class, ReferenceMapRenderer::class);
     }
 
     /**

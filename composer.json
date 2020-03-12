@@ -9,7 +9,7 @@
     "license": "MIT",
     "require": {
         "php": "^7.2",
-        "drtheuns/apitizer_php": "^0.2.0",
+        "drtheuns/apitizer_php": "dev-master",
         "fideloper/proxy": "^4.0",
         "laravel/framework": "^6.2",
         "laravel/telescope": "^2.1",
