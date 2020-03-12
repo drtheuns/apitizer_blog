@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "dd0c3d96e785a9ea9e3e4c5859f508af",
+    "content-hash": "a9acacf1f614b1a36f88aed2a89a3141",
     "packages": [
         {
             "name": "dnoegel/php-xdg-base-dir",
@@ -228,12 +228,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/drtheuns/apitizer_php.git",
-                "reference": "0685ce6e44e2d0dfdde704f1b3b17b3ba1e86a7d"
+                "reference": "db90215a3d0cae848b98dd1d1dba52a163f907d7"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/drtheuns/apitizer_php/zipball/0685ce6e44e2d0dfdde704f1b3b17b3ba1e86a7d",
-                "reference": "0685ce6e44e2d0dfdde704f1b3b17b3ba1e86a7d",
+                "url": "https://api.github.com/repos/drtheuns/apitizer_php/zipball/db90215a3d0cae848b98dd1d1dba52a163f907d7",
+                "reference": "db90215a3d0cae848b98dd1d1dba52a163f907d7",
                 "shasum": ""
             },
             "require": {
@@ -270,8 +270,8 @@
                     "email": "randall@theuns.org"
                 }
             ],
-            "description": "A Laravel querybuilder library for JSON APIs",
-            "time": "2020-03-02T21:29:55+00:00"
+            "description": "A Laravel schema library for JSON APIs",
+            "time": "2020-03-12T14:17:42+00:00"
         },
         {
             "name": "egulias/email-validator",
